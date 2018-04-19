@@ -27,6 +27,10 @@ app.get('/projects', (req, res) => {
   res.render('projects');
 });
 
+app.get('/nav', (req, res) => {
+  res.render('nav');
+});
+
 app.listen(3000, () => {
   console.log('The best project is running, heck ya!!')
 });
