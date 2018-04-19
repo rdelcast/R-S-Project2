@@ -1,1 +1,7 @@
-h1 hello
+if name
+    h2 Welcome, #{name}!
+  else
+    form(action='/home', method='post')
+      label please enter your name:
+        input(type='text', name='username')
+      button(tyope='submit') Submit

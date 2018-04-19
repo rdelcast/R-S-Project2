@@ -1,6 +1,6 @@
 const bodyParser = require('body-parser');
 const express = require('express');
-cosnt cookieparser = require('cookie-parser')
+const cookieParser = require('cookie-parser')
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false}))
@@ -15,6 +15,11 @@ app.get('/', (req, res) => {
 
 app.get('/login', (req, res) => {
   res.render('login');
+});
+app.post('/login', (req, res) => {
+  res.cookie('username', req.body.username);
+  console.dir(req.body);
+  res.render('login',{name: req.body.username });
 });
 
 app.get('/projects', (req, res) => {
