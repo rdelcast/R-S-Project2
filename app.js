@@ -16,6 +16,7 @@ app.get('/', (req, res) => {
 app.get('/login', (req, res) => {
   res.render('login');
 });
+
 app.post('/login', (req, res) => {
   res.cookie('username', req.body.username);
   console.dir(req.body);
