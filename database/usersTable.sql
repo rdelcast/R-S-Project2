@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS users;
+
+
+CREATE TABLE users (
+  userId SERIAL PRIMARY KEY,
+  Name VARCHAR(255),
+  lastName VARCHAR(255),
+  email VARCHAR(255);
+
+);

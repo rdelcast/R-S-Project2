@@ -4,10 +4,14 @@ html(lang="en")
     title flash card
   body
     ul
-      li(class=(title === 'Home' ? 'active' : ''))
-        a(href='#') Home
-      li(class=(title === 'Dashboard' ? 'active' : ''))
-        a(href='#') Dashboard
+      li(class=(title === 'landing' ? 'active' : ''))
+        a(href='#') R&S
+      li(class=(title === 'About us' ? 'active' : ''))
+        a(href='#') about us
+      li(class=(title === 'projects' ? 'active' : ''))
+        a(href='#') Projects
+
+
 block content
     footer
       p an app to help you study
