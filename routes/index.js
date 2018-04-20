@@ -1,11 +1,11 @@
 const express = require ('expresss');
-const router = express.router();
+const router = express.Router();
 
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
   res.render('landing', { prompt: "who is burried in grant´s tumb?"});
 });
 
-app.get('/projects', (req, res) => {
+router.get('/projects', (req, res) => {
    const name = req.cookies.username;
    if (name) {
     res.render('projects', {name});
@@ -14,22 +14,22 @@ app.get('/projects', (req, res) => {
    }
 });
 
-app.get('/aboutus', (req, res) => {
+router.get('/aboutus', (req, res) => {
   res.render('aboutus', { prompt: "who is burried in grant´s tumb?"});
 });
 
 
-app.get('/login', (req, res) => {
+router.get('/login', (req, res) => {
   res.render('login', { name: req.cookies.username });
 });
 
-app.post('/login', (req, res) => {
+router.post('/login', (req, res) => {
   res.cookie('username', req.body.username);
   console.dir(req.body);
   res.redirect('/projects');
 });
 
-app.post('/goodbye', (req,res) => {
+router.post('/goodbye', (req,res) => {
   res.clearCookie('username');
   res.redirect('/');
 })
