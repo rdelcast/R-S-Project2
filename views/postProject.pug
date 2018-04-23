@@ -1,0 +1,23 @@
+extends layout.pug
+block content
+
+    div.postDevelopment
+      h1 Post your development project here
+        form(method='POST' action='/projects')
+              div.projectForm
+                label(for='name') Name your project:
+                input#nameOfProject.form-control(type='text', placeholder='Name your project' name='name')
+              div.projectForm
+                label(for='img_url') img_url:
+                input#lnameOfProject.form-control(type='text', placeholder='Post your image' name='img')
+              div.projectForm
+                label(for='email') Goal:
+                input#Goal.form-control(type='Goal', placeholder='$1000000' name='Goal')
+              div.projectForm
+                label(for='email') Current:
+                input#Goal.form-control(type='current', placeholder='$300000' name='Goal')
+              div.projectForm
+                label(for='Description') Descritpion:
+                input#Description.form-control(type='Description', placeholder='Residential building, comericail, etc...' name='Descritpion')
+              button(tyope='submit') Submit
+

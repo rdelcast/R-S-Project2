@@ -1,9 +1,9 @@
-extends sandbox.pug
+extends layout.pug
 block content
-  h1 Projects
-    div.kanali
-      h2 kanali
-        p a residential building
-    div
-  form(action='/goodbye', method='post')
-        Button(type='submit') goodbye
+  each i in projects
+            div.showProjects
+              h2.nemeOfProject #{i.name}
+                div.contentOfProject
+                    p #{i.goal}
+                    p #{i.current}
+                    p #{i.description}

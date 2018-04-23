@@ -1,9 +1,0 @@
-extends sandbox.pug
-block content
-  if name
-      h2 Welcome, #{name}!
-  else
-      form(action='/login', method='post')
-        label please enter your name:
-          input(type='text', name='username')
-        button(tyope='submit') Submit

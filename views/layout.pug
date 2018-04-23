@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title TITLE OF THE DOCUMENT
+    link(rel='stylesheet', href='')
+  body
+    block navBar
+        div.container
+            ul.col-md-12.row
+                a(href="/landing")
+                    li.col-md-3.col-md-offset-1 R&S
+                a(href="/aboutus")
+                    li.col-md-3 About us
+                a(href="/projects")
+                    li.col-md-3 projects
+                a(href="/postProject")
+                    li.col-md-3 My projects
+                a(href="/signup")
+                    li.col-md-3 sign up
+    block content

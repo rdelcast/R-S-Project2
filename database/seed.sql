@@ -1,4 +1,4 @@
-/c R&S_crud
+\c R&S_crud
 
 DROP TABLE IF EXISTS houses CASCADE;
 DROP TABLE IF EXISTS students CASCADE;
@@ -17,8 +17,17 @@ CREATE TABLE users (
   Name VARCHAR(255),
   lname VARCHAR(255),
   email VARCHAR(255);
-  house_id INTEGER REFERENCES houses(id),
+  projects_id INTEGER REFERENCES projects(id),
 );
+
+CREATE TABLE usersProjects (
+  userProject SERIAL PRIMARY KEY,
+  user_id INTEGER,
+  project_id INTEGER,
+);
+
+
+
 
 INSERT INTO projects
   (name, img_url, goal, current, description)
