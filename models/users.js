@@ -9,7 +9,7 @@ function createUser(users) {
     (name, lname, email,)
     VALUES ($/name/, $/lname/, $/email/,)
     RETURNING *`,
-    student);
+    users);
   return query;
 }
 

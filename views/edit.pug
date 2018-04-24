@@ -1,0 +1,14 @@
+extends layout.pug
+block content
+  h1 Edit Project
+    form(action=`/projects${project.id}?_method=PUT`, method='POST')
+            label(for='name') Name:
+            (type='text', name='description', value=`${i.name}`)
+            label(for='lname') goal:
+            (type='text', name='description', value=`${i.goal}`)
+            label(for='email') Current:
+            (type='text', name='description', value=`${i.current}`)
+            label(for='description') Description:
+            (type='text', name='description', value=`${i.description}`)
+
+            button(type='submit') Submit

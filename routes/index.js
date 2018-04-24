@@ -25,6 +25,10 @@ router.get('/projects', (req, res) => {
   res.render('projects');
 });
 
+router.get('/edit', (req, res) => {
+  res.render('edit');
+});
+
 router.post('/goodbye', (req,res) => {
   res.clearCookie('username');
   res.redirect('/');

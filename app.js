@@ -16,14 +16,17 @@ app.set('views', path.join(__dirname, 'views'));
 
 const mainRoutes = require('./routes/index');
 const userRoutes = require('./routes/usersRoutes');
+const projectsRoutes = require('./routes/projectsRoutes');
 
+app.use(projectsRoutes);
 app.use(mainRoutes);
-app.use('/users',userRoutes);
+app.use('/landing',userRoutes);
 
 
 app.use((err, req, res, next) => {
   res.locals.error = err;
-  res.status(500).send(err);
+  console.log(err)
+  res.status(404).send(err);
 
 });
 

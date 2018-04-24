@@ -1,7 +1,7 @@
-const studentsDb = require('../../models/users');
+const usersDb = require('../../models/users');
 
 function create(req, res, next) {
-  studentsDb.createUsers(req.body)
+  usersDb.createUser(req.body)
     .then(data => {
       res.locals.newUser = data;
       console.log('controller works')
@@ -16,7 +16,7 @@ function create(req, res, next) {
 
 function update(req, res, next) {
   req.body.id = req.params.id;
-  studentsDb.updateUsers(req.body)
+  usersDb.updateUsers(req.body)
     .then(data => {
       res.redirect(`/users/${req.body.id}`)
     })

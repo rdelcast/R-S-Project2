@@ -1,9 +1,16 @@
 extends layout.pug
 block content
-  each i in projects
-            div.showProjects
-              h2.nemeOfProject #{i.name}
-                div.contentOfProject
-                    p #{i.goal}
-                    p #{i.current}
-                    p #{i.description}
+  h1 Projects
+    each i in projects
+              div.showProjects
+                h2.nameOfProject #{i.name}
+                  div.contentOfProject
+                      p Funding goal $ #{i.goal}
+                      p Current backing $ #{i.current}
+                      p Description: #{i.description}
+                      a(href="/edit")
+                          button(type="button") edit
+                      a(href="/delete")
+                          button(type="button") delete
+
+
