@@ -14,13 +14,11 @@ router.get('/postProject', (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-  res.render('login', { name: req.cookies.username });
+  res.render('login');
 });
-
 router.get('/signup', (req, res) => {
-  res.render('signup', { name: req.cookies.username });
+  res.render('signup');
 });
-
 router.get('/projects', (req, res) => {
   res.render('projects');
 });
