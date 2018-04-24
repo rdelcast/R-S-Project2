@@ -5,19 +5,18 @@ html
     meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     title TITLE OF THE DOCUMENT
-    link(rel='stylesheet', href='/public/style.css')
+    link(rel='stylesheet', href='/style.css')
   body
-    block navBar
-        div.container
-            ul.col-md-12.row
-                a(href="/landing")
-                    li.col-md-3.col-md-offset-1 R&S
-                a(href="/aboutus")
-                    li.col-md-3 About us
-                a(href="/projects")
-                    li.col-md-3 Projects
-                a(href="/postProject")
-                    li.col-md-3 Post projects
-                a(href="/signup")
-                    li.col-md-3 sign up
-    block content
+    div.container
+        ul.col-md-12.row
+            a(href="/views/landing")
+                li.col-md-3.col-md-offset-1 R&S
+            a(href="/views/aboutus")
+                li.col-md-3 About us
+            a(href="/views/projects")
+                li.col-md-3 Projects
+            a(href="/views/postProject")
+                li.col-md-3 Post projects
+            a(href="/views/signup")
+                li.col-md-3 sign up
+block content

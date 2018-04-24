@@ -1,3 +1,46 @@
 body {
-    background-image: url("img_tree.png");
+    background-image: url('http://res.cloudinary.com/rch/image/upload/c_scale,w_1782/v1524581427/pedro-lastra-130450-unsplash_1.jpg');
   }
+.container{
+  color: black;
+  background-color: black;
+  height: 60px;
+  border-radius: 20px;
+  margin-left: 350px;
+  margin-right: 350px;
+  text-align: center;
+  opacity: 0.5;
+}
+ul{
+  list-style: none;
+  dislplay: inline-block;
+  margin: 0 auto;
+  color: white;
+
+}
+li {
+  display: inline-block;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+
+}
+a {
+  padding: 15px;
+}
+.description {
+  text-align:  center;
+  margin-top: auto;
+  background-color: black;
+  border-radius: 25px;
+  margin: 50px;
+  opacity: 0.5;
+  margin-left: 350px;
+  margin-right: 350px;
+  height: 400px;
+  color: white;
+  text-align: center;
+}
+.landing{
+  padding: 25px;
+}

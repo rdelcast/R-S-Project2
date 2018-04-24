@@ -22,6 +22,7 @@ function getOneProject(id) {
     WHERE id = $1`, id);
   return queryPromise;
 }
+
 module.exports = {
   getAllProjects,
   updateProjects,
